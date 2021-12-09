@@ -25,7 +25,7 @@ All glasses and catalogs are exported in their respective modules, so it is poss
 ```julia
 using GlassCat
 SCHOTT.PK3
-using OpticsSim.GlassCat.SCHOTT
+using GlassCat.SCHOTT
 N_BK7
 ```
 
