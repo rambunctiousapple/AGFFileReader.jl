@@ -5,12 +5,32 @@ CurrentModule = GlassCat
 # GlassCat
 Documentation for [GlassCat](https://github.com/rambunctiousapple/GlassCat.jl).
 
-GlassCat is a library for reading AGF files, a file format widely used in optical design. The contents of an AGF file can vary but usually each file contains material property information for several optical materials made by a single manufacturer. By convention the name of the AGF file is assumed to be the manufacturer name. For example SCHOTTAGF contains material data for glasses made by the Schott company. AGF files are available from many publicly accessible websites. 
+GlassCat is a library for reading AGF files, a file format widely used in optical design. The contents of an AGF file can vary but usually each file contains material property information for several optical materials made by a single manufacturer. By convention the name of the AGF file is assumed to be the manufacturer name. For example SCHOTT.AGF contains material data for glasses made by the Schott company. AGF files are available from many publicly accessible websites. 
 
 GlassCat automates the process of downloading and installing an extensive library of AGF files from many sources. When the GlassCat package is first installed the build process will attempt to download AGF glass files from the sources in the file `data/sources.txt`. 
 
 GlassCat transforms the information in the AGF files into Julia files stored in the `data` subdirectory, which is created automatically during the build process. Each AGF file gets its own module, whose name will match that of the AGF file. Each material is assigned a corresponding Julia type. 
  
+ ## Using installed glasses
+
+Glass types are accessed like so: `GlassCat.CATALOG_NAME.GLASS_NAME`, e.g.
+
+```julia
+GlassCat.SUMITA.LAK7
+GlassCat.SCHOTT.PK3
+```
+
+All glasses and catalogs are exported in their respective modules, so it is possible to invoke `using` calls for convenience, e.g.
+
+```julia
+using GlassCat
+SCHOTT.PK3
+using OpticsSim.GlassCat.SCHOTT
+N_BK7
+```
+
+
+
 At the Julia REPL you can use tab to autocomplete glass names or double tab to show glass types available in a particular glass library. For example, this is the result of typing tab twice after typing the intitial string `SCHOTT.N_LA`:
 
 ```
@@ -22,6 +42,22 @@ N_LAF32    N_LAF36     N_LAK14     N_LAK33A    N_LAK8      N_LASF40    N_LASF45 
 ```
 
 If you use the VSCode IDE its Intellisense autocompletion provides similar functionality.
+
+All catalog glasses are of type [`GlassCat.Glass`](@ref).
+Note that special characters in glass/catalog names are replaced with `_`.
+There is a special type and constant value for air: [`GlassCat.Air`](@ref).
+
+[Unitful.jl](https://github.com/PainterQubits/Unitful.jl) is used to manage units, meaning any valid unit can be used for all arguments, e.g., wavelength can be passed in as μm or nm (or cm, mm, m, etc.).
+Non-unitful options are also available, in which case units are assumed to be μm, °C and Atm for length, temperature and pressure respectively.
+
+`TEMP_REF` and `PRESSURE_REF` are constants:
+
+```julia
+const TEMP_REF = 20.0 # °C
+const PRESSURE_REF = 1.0 # Atm
+```
+
+## Utility functions
 
 You can print out glass properties with the `info` function:
 
@@ -92,6 +128,24 @@ Transmission data:
 You can also plot glass properties with the `plot_indices` function
 
 ```
-julia> plot_indices(SCHOTT.FK#)
+julia> plot_indices(SCHOTT.FK3)
+```
+
+![Refractive Index vs. wavelength for SCHOTT.FK3](assets/SCHOTT.FK3-indexplot.png)
+
+## How GlassCat works
+
+The central configuration file for GlassCat is located at `src/GlassCat/data/sources.txt`. Each line in the file corresponds to one AGF source, which is described by 2 to 4 space-delimited columns. The first column provides the installed module name for the catalog, e.g. `GlassCat.NIKON`. The second column is the expected SHA256 checksum for
+the AGF file.
+
+The final two columns are optional, specifying download instructions for acquiring the zipped AGF files
+automatically from the web. The fourth column allows us to use POST requests to acquire files from interactive sites.
+
+## Adding glass catalogs
+`sources.txt` can be edited freely to add more glass catalogs. However, this is a somewhat tedious process, so we have a
+convenience function for adding a locally downloaded AGF file to the source list.
+
+```@docs
+GlassCat.add_agf
 ```
 
