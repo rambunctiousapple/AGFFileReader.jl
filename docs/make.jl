@@ -22,6 +22,7 @@ makedocs(;
 )
 
 deploydocs(;
-    repo="github.com/rambunctiousapple/GlassCat.jl",
+    repo="github.com/rambunctiousapple/GlassCat.jl.git",
     devbranch="main",
+    push_preview = true,
 )
