@@ -3,6 +3,8 @@ using Documenter
 
 DocMeta.setdocmeta!(GlassCat, :DocTestSetup, :(using GlassCat); recursive=true)
 
+#TODO add plotting examples
+
 makedocs(;
     modules=[GlassCat],
     authors="rambunctiousapple",
