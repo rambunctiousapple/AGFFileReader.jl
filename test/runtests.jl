@@ -124,7 +124,7 @@ end
 
     @testset "generate.jl" begin
         CATALOG_NAME = "TEST_CAT"
-        SOURCE_DIR = joinpath(@__DIR__, "test")
+        SOURCE_DIR = @__DIR__
         SOURCE_FILE = joinpath(SOURCE_DIR, "$(CATALOG_NAME).agf")
 
         TMP_DIR = mktempdir()
