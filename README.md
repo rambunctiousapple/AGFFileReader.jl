@@ -4,3 +4,5 @@
 [![Dev](https://img.shields.io/badge/docs-dev-blue.svg)](https://rambunctiousapple.github.io/GlassCat.jl/dev)
 [![Build Status](https://github.com/rambunctiousapple/GlassCat.jl/actions/workflows/CI.yml/badge.svg?branch=main)](https://github.com/rambunctiousapple/GlassCat.jl/actions/workflows/CI.yml?query=branch%3Amain)
 [![Coverage](https://codecov.io/gh/rambunctiousapple/GlassCat.jl/branch/main/graph/badge.svg)](https://codecov.io/gh/rambunctiousapple/GlassCat.jl)
+
+This is a standalone version of GlassCat.jl, which previously was incorporated as part of OpticSim.jl. OpticSim.jl now uses GlassCat.jl as a dependency.
