@@ -20,16 +20,24 @@ jobs:
         version:
           - '1.7'
         os:
-          - ubuntu-18.04
+          - ubuntu-latest
           - windows-latest
         arch:
           - x64
+        include:
+          - os: ubuntu-latest
+            prefix: xvfb-run
     steps:
       - uses: actions/checkout@v2
       - uses: julia-actions/setup-julia@v1
         with:
           version: ${{ matrix.version }}
           arch: ${{ matrix.arch }}
+                - name: Install GR dependencies (Linux only)
+        if: runner.os == 'Linux'
+        run: |
+          sudo apt-get update
+          sudo apt install libxt6 libxrender1 libxext6 libgl1-mesa-glx libqt5widgets5
       - uses: actions/cache@v1
         env:
           cache-name: cache-artifacts
