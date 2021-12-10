@@ -1,7 +1,7 @@
 name = "GlassCat"
 uuid = "36dd7d7d-c279-4b5c-a024-2ba417cea492"
 authors = ["rambunctiousapple"]
-version = "0.1.0"
+version = "1.0.0"
 
 [deps]
 DataFrames = "a93c6f00-e57d-5684-b7b6-d8193f3e46c0"
