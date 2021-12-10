@@ -33,7 +33,6 @@ jobs:
         with:
           version: ${{ matrix.version }}
           arch: ${{ matrix.arch }}
-                - name: Install GR dependencies (Linux only)
       - name: Install GR dependencies (Linux only)
         if: runner.os == 'Linux'
         run: |
