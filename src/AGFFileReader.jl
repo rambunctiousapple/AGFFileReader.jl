@@ -2,7 +2,7 @@
 # Copyright (c) Microsoft Corporation. All rights reserved.
 # See LICENSE in the project root for full license information.
 
-module GlassCat
+module AGFFileReader
 
 using Polynomials
 using Plots
@@ -26,7 +26,7 @@ export Air, isair
 @assert AGFGLASSCAT_PATH === joinpath(@__DIR__, "data", "jl", "AGFGlassCat.jl")
 if !isfile(AGFGLASSCAT_PATH)
     @warn "$(basename(AGFGLASSCAT_PATH)) not found! Running build steps."
-    Pkg.build("OpticSim"; verbose=true)
+    Pkg.build("AGFFileReader"; verbose=true)
 end
 include("data/jl/AGFGlassCat.jl") # this needs to be literal for intellisense to work
 include("data/jl/OTHER.jl")
@@ -50,4 +50,4 @@ export add_agf
 include("generate.jl")
 
 end # module
-export GlassCat
+export AGFFileReader

@@ -3,7 +3,7 @@
 # See LICENSE in the project root for full license information.
 
 using Test
-using GlassCat
+using AGFFileReader
 
 using Base.Filesystem
 using DataFrames: DataFrame
@@ -43,12 +43,12 @@ macro wrappedallocs(expr)
     end
 end
 
-@testset "GlassCat" begin
+@testset "AGFFileReader" begin
     @testset "Build Tests" begin
         # check that all automatic downloads are working
         # this shouldn't be a test because we cannot guarantee that all downloads will work. Random network issues, changes in webpages, etc. can temporarily prevent downloads.
         # for catname in split("HOYA NIKON OHARA SCHOTT SUMITA")
-        #     agffile = joinpath(GlassCat.AGF_DIR, catname * ".agf")
+        #     agffile = joinpath(AGFFileReader.AGF_DIR, catname * ".agf")
         #     @test isfile(agffile)
         # end
 
@@ -110,11 +110,11 @@ end
             tmpdir = mktempdir()
             agfdir = mktempdir(tmpdir)
 
-            sources = split.(readlines(GlassCat.SOURCES_PATH))
-            GlassCat.verify_sources!(sources, agfdir)
+            sources = split.(readlines(AGFFileReader.SOURCES_PATH))
+            AGFFileReader.verify_sources!(sources, agfdir)
 
             # this doesn't work if any of the glass catalogs can't be downloaded. Need a different test
-            # @test first.(sources) == first.(split.(readlines(GlassCat.SOURCES_PATH)))
+            # @test first.(sources) == first.(split.(readlines(AGFFileReader.SOURCES_PATH)))
 
             # TODO missing_sources
         end
@@ -178,7 +178,7 @@ end
         FIELDS = names(TEST_CAT_VALUES)[2:end]
 
         @testset "Parsing Tests" begin
-            cat = GlassCat.agffile_to_catalog(SOURCE_FILE)
+            cat = AGFFileReader.agffile_to_catalog(SOURCE_FILE)
 
             for glass in eachrow(TEST_CAT_VALUES)
                 name = glass["name"]
@@ -190,7 +190,7 @@ end
         end
 
         @testset "Module Gen Tests" begin
-            GlassCat.generate_jls([CATALOG_NAME], MAIN_FILE, TMP_DIR, SOURCE_DIR, test=true)
+            AGFFileReader.generate_jls([CATALOG_NAME], MAIN_FILE, TMP_DIR, SOURCE_DIR, test=true)
             include(MAIN_FILE)
 
             for row in eachrow(TEST_CAT_VALUES)
@@ -280,10 +280,10 @@ end
 
     @testset "Air.jl" begin
         @test repr(Air) === "Air"
-        @test glassname(Air) === "GlassCat.Air"
+        @test glassname(Air) === "AGFFileReader.Air"
 
         info_lines = [
-            "GlassCat.Air",
+            "AGFFileReader.Air",
             "Material representing air, RI is always 1.0 at system temperature and pressure, absorption is always 0.0.",
             ""
         ]
@@ -293,21 +293,21 @@ end
     end
 
     @testset "GlassTypes.jl" begin
-        @test repr(GlassID(GlassCat.MODEL, 1)) === "MODEL:1"
-        @test repr(GlassID(GlassCat.MIL, 1)) === "MIL:1"
-        @test repr(GlassID(GlassCat.AGF, 1)) === "AGF:1"
-        @test repr(GlassID(GlassCat.OTHER, 1)) === "OTHER:1"
-        @test repr(GlassID(GlassCat.AIR, 1)) === "AIR:1" # TODO should this fail?
+        @test repr(GlassID(AGFFileReader.MODEL, 1)) === "MODEL:1"
+        @test repr(GlassID(AGFFileReader.MIL, 1)) === "MIL:1"
+        @test repr(GlassID(AGFFileReader.AGF, 1)) === "AGF:1"
+        @test repr(GlassID(AGFFileReader.OTHER, 1)) === "OTHER:1"
+        @test repr(GlassID(AGFFileReader.AIR, 1)) === "AIR:1" # TODO should this fail?
 
         empty_args = SVector{36,Union{Int,Nothing}}(repeat([0], 27)..., nothing, repeat([0], 8)...)
-        @test repr(GlassCat.Glass(GlassID(GlassCat.MODEL, 1), empty_args...)) === "GlassCat.ModelGlass.1"
-        @test repr(GlassCat.Glass(GlassID(GlassCat.MIL, 1), empty_args...)) === "GlassCat.GlassFromMIL.1"
-        @test repr(GlassCat.Glass(GlassID(GlassCat.AGF, 1), empty_args...)) === "NIKON.SF9" # fails if sources.txt is changed
-        @test repr(GlassCat.Glass(GlassID(GlassCat.OTHER, 1), empty_args...)) === "CARGILLE.OG0607"
-        @test repr(GlassCat.Glass(GlassID(GlassCat.AIR, 1), empty_args...)) === "GlassCat.Air" # repeated code
+        @test repr(AGFFileReader.Glass(GlassID(AGFFileReader.MODEL, 1), empty_args...)) === "AGFFileReader.ModelGlass.1"
+        @test repr(AGFFileReader.Glass(GlassID(AGFFileReader.MIL, 1), empty_args...)) === "AGFFileReader.GlassFromMIL.1"
+        @test repr(AGFFileReader.Glass(GlassID(AGFFileReader.AGF, 1), empty_args...)) === "NIKON.SF9" # fails if sources.txt is changed
+        @test repr(AGFFileReader.Glass(GlassID(AGFFileReader.OTHER, 1), empty_args...)) === "CARGILLE.OG0607"
+        @test repr(AGFFileReader.Glass(GlassID(AGFFileReader.AIR, 1), empty_args...)) === "AGFFileReader.Air" # repeated code
 
-        @test glassforid(GlassID(GlassCat.AIR, 1)) === Air
-        @test glassforid(GlassID(GlassCat.OTHER, 1)) === CARGILLE.OG0607
+        @test glassforid(GlassID(AGFFileReader.AIR, 1)) === Air
+        @test glassforid(GlassID(AGFFileReader.OTHER, 1)) === CARGILLE.OG0607
 
         info_lines = [
             "ID:                                                OTHER:2",
@@ -407,4 +407,4 @@ end
 
         # TODO _child_modules() unit test
     end
-end # testset GlassCat
+end # testset AGFFileReader

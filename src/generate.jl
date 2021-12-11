@@ -203,7 +203,7 @@ function catalog_to_modstring(
 
     modstrings = [
         "module $catalogname",
-        "using ..GlassCat: Glass, GlassID, $glasstype",
+        "using ..AGFFileReader: Glass, GlassID, $glasstype",
         "export $(join(keys(catalog), ", "))",
         ""
     ]

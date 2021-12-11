@@ -5,23 +5,23 @@
 """
     glasscatalogs()
 
-Returns the complete list of glass catalogs available from GlassCat.
+Returns the complete list of glass catalogs available from AGFFileReader.
 
 ## Example
 ```julia-repl
 julia> glasscatalogs()
 41-element Array{Any,1}:
- OpticSim.GlassCat.AMTIR
- OpticSim.GlassCat.ANGSTROMLINK
- OpticSim.GlassCat.APEL
- OpticSim.GlassCat.ARCHER
- OpticSim.GlassCat.ARTON
- OpticSim.GlassCat.AUER_LIGHTING
- OpticSim.GlassCat.BIREFRINGENT
+ OpticSim.AGFFileReader.AMTIR
+ OpticSim.AGFFileReader.ANGSTROMLINK
+ OpticSim.AGFFileReader.APEL
+ OpticSim.AGFFileReader.ARCHER
+ OpticSim.AGFFileReader.ARTON
+ OpticSim.AGFFileReader.AUER_LIGHTING
+ OpticSim.AGFFileReader.BIREFRINGENT
  ⋮
 ```
 """
-glasscatalogs() = _child_modules(GlassCat)
+glasscatalogs() = _child_modules(AGFFileReader)
 
 """
     glassnames(catalog::Module)
@@ -30,7 +30,7 @@ Returns the glass names available from a given catalog.
 
 # Example
 ```julia-repl
-julia> glassnames(GlassCat.CARGILLE)
+julia> glassnames(AGFFileReader.CARGILLE)
 3-element Array{Any,1}:
  "OG0607"
  "OG0608"
@@ -58,15 +58,15 @@ Returns the glass names available from all catalogs.
 ```julia-repl
 julia> glassnames()
 6-element Array{Pair{Module,Array{Any,1}},1}:
- OpticSim.GlassCat.CARGILLE => ["OG0607", "OG0608", "OG081160"]
-     OpticSim.GlassCat.HOYA => ["BAC4", "BACD11"  …  "TAFD65"]
-    OpticSim.GlassCat.NIKON => ["BAF10", "BAF11"  …  "_7054"]
-    OpticSim.GlassCat.OHARA => ["L_BAL35", "L_BAL35P"  …  "S_TIM8"]
-   OpticSim.GlassCat.SCHOTT => ["AF32ECO", "BAFN6"  …  "SFL6"]
-   OpticSim.GlassCat.SUMITA => ["BAF1", "BAF10"  …  "ZNSF8"]
+ OpticSim.AGFFileReader.CARGILLE => ["OG0607", "OG0608", "OG081160"]
+     OpticSim.AGFFileReader.HOYA => ["BAC4", "BACD11"  …  "TAFD65"]
+    OpticSim.AGFFileReader.NIKON => ["BAF10", "BAF11"  …  "_7054"]
+    OpticSim.AGFFileReader.OHARA => ["L_BAL35", "L_BAL35P"  …  "S_TIM8"]
+   OpticSim.AGFFileReader.SCHOTT => ["AF32ECO", "BAFN6"  …  "SFL6"]
+   OpticSim.AGFFileReader.SUMITA => ["BAF1", "BAF10"  …  "ZNSF8"]
 ```
 """
-glassnames() = [m => glassnames(m) for m in _child_modules(GlassCat)]
+glassnames() = [m => glassnames(m) for m in _child_modules(AGFFileReader)]
 
 """
     findglass(condition::Function) -> Vector{Glass}
@@ -76,7 +76,7 @@ Returns the list of glasses which satisfy `condition` where `condition::(Glass -
 # Example
 ```julia-repl
 julia> findglass(x -> (x.Nd > 2.3 && x.λmin < 0.5 && x.λmax > 0.9))
-8-element Array{GlassCat.Glass,1}:
+8-element Array{AGFFileReader.Glass,1}:
  BIREFRINGENT.TEO2_E
  BIREFRINGENT.PBMOO4
  BIREFRINGENT.LINBO3

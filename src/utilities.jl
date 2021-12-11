@@ -14,13 +14,13 @@ If unitless, arguments are interpretted as μm, °C and Atm respectively.
 
 # Examples
 ```julia-repl
-julia> absorption(GlassCat.SUMITA.LAK7, 700u"nm")
+julia> absorption(AGFFileReader.SUMITA.LAK7, 700u"nm")
 0.0006018072325563021
 
-julia> absorption(GlassCat.SCHOTT.N_BK7, 0.55, temperature = 22.0)
+julia> absorption(AGFFileReader.SCHOTT.N_BK7, 0.55, temperature = 22.0)
 0.00016504471175660636
 
-julia> absorption(GlassCat.SCHOTT.PSK3, 532u"nm", temperature = 25u"°C", pressure = 1.3)
+julia> absorption(AGFFileReader.SCHOTT.PSK3, 532u"nm", temperature = 25u"°C", pressure = 1.3)
 0.00020855284788532435
 ```
 """
@@ -93,13 +93,13 @@ If unitless, arguments are interpretted as μm, °C and Atm respectively.
 
 # Examples
 ```julia-repl
-julia> index(GlassCat.SUMITA.LAK7, 700u"nm")
+julia> index(AGFFileReader.SUMITA.LAK7, 700u"nm")
 1.646494204478318
 
-julia> index(GlassCat.SCHOTT.N_BK7, 0.55, temperature = 22.0)
+julia> index(AGFFileReader.SCHOTT.N_BK7, 0.55, temperature = 22.0)
 1.51852824383283
 
-julia> index(GlassCat.HOYA.FF1, 532u"nm", temperature = 25u"°C", pressure = 1.3)
+julia> index(AGFFileReader.HOYA.FF1, 532u"nm", temperature = 25u"°C", pressure = 1.3)
 1.5144848290944655
 ```
 """

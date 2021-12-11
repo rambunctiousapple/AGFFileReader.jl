@@ -72,9 +72,9 @@ jobs:
     #   - run: |
     #       julia --project=docs -e '
     #         using Documenter: DocMeta, doctest
-    #         using GlassCat
-    #         DocMeta.setdocmeta!(GlassCat, :DocTestSetup, :(using GlassCat); recursive=true)
-    #         doctest(GlassCat)'
+    #         using AGFFileReader
+    #         DocMeta.setdocmeta!(AGFFileReader, :DocTestSetup, :(using AGFFileReader); recursive=true)
+    #         doctest(AGFFileReader)'
     name: Documentation
     runs-on: ubuntu-18.04
     steps:

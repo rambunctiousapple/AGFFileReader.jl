@@ -1,5 +1,5 @@
 module INFRARED
-using ..GlassCat: Glass, GlassID, AGF
+using ..AGFFileReader: Glass, GlassID, AGF
 export CDSE, GERMANIUM, ZNSE, IRG100, NACL, CALCITE, F_SILICA, PBF2, MGF2, IRG3, CDTE, GEO2, KCL, GE_LONG, AMTIR1, GAAS, TI_1173, BAF2, IRG2, ZBLAN, IRG11, MGO, IRG9, SPINEL, IRG7, LIF, AMTIR3, CAF2, GE_OLD, ZNS_IR, CLRTR_OLD, CLEARTRAN, KBR, ALON, SILICON, ALN, BEO, SRTIO3, KRS5, ZBLA, ZNS_BROAD, IRG15, CSBR, AGCL, SRF2, ZNS_VIS, IRGN6, SAPPHIRE
 
 const CDSE = Glass(GlassID(AGF, 1590), 9, 4.2243, 1.768, 0.227, 3.12, 3380.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 22.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 20.0, 0.0, -1.0, -1.0, 4.9, -1.0, 0, -1.0, [(0.334, 1.0, 25.0), (0.35, 1.0, 25.0), (0.365, 1.0, 25.0), (0.37, 1.0, 25.0), (0.38, 1.0, 25.0), (0.39, 1.0, 25.0), (0.4, 1.0, 25.0), (0.42, 1.0, 25.0), (0.46, 1.0, 25.0), (0.5, 1.0, 25.0), (0.66, 1.0, 25.0), (1.06, 1.0, 25.0), (1.529, 1.0, 25.0), (2.325, 1.0, 25.0)], 1.0, -1.0, -1.0, 0, 0.0, 0, 1.0, 0)

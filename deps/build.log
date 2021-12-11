@@ -1,45 +1,45 @@
-[ Info: [✓] Verified file at C:\Users\seatt\.julia\dev\GlassCat\src\data\agf\NIKON.agf
-[ Info: [✓] Verified file at C:\Users\seatt\.julia\dev\GlassCat\src\data\agf\OHARA.agf
-[ Info: [✓] Verified file at C:\Users\seatt\.julia\dev\GlassCat\src\data\agf\HOYA.agf
-[ Info: [✓] Verified file at C:\Users\seatt\.julia\dev\GlassCat\src\data\agf\SCHOTT.agf
-[ Info: [-] Missing file at C:\Users\seatt\.julia\dev\GlassCat\src\data\agf\SUMITA.agf
+[ Info: [✓] Verified file at C:\Users\seatt\.julia\dev\AGFFileReader\src\data\agf\NIKON.agf
+[ Info: [✓] Verified file at C:\Users\seatt\.julia\dev\AGFFileReader\src\data\agf\OHARA.agf
+[ Info: [✓] Verified file at C:\Users\seatt\.julia\dev\AGFFileReader\src\data\agf\HOYA.agf
+[ Info: [✓] Verified file at C:\Users\seatt\.julia\dev\AGFFileReader\src\data\agf\SCHOTT.agf
+[ Info: [-] Missing file at C:\Users\seatt\.julia\dev\AGFFileReader\src\data\agf\SUMITA.agf
 [ Info: Downloading source file from https://www.sumita-opt.co.jp/en/wp/wp-content/themes/sumita-opt-en/download-files.php
-[ Info: [x] Removing unverified file at C:\Users\seatt\.julia\dev\GlassCat\src\data\agf\SUMITA.agf (expected fad12bfb1754ee9e33f7a6ec65c784c1dd1b8e87fde1ac2e440d24e85630c758, got b633780101bd14bfb23568d633ce504368b459113657b6ce1a22cbc83dd498d0)
-[ Info: [✓] Verified file at C:\Users\seatt\.julia\dev\GlassCat\src\data\agf\ARCHER.agf
-[ Info: [✓] Verified file at C:\Users\seatt\.julia\dev\GlassCat\src\data\agf\ARTON.agf
-[ Info: [✓] Verified file at C:\Users\seatt\.julia\dev\GlassCat\src\data\agf\BIREFRINGENT.agf
-[ Info: [✓] Verified file at C:\Users\seatt\.julia\dev\GlassCat\src\data\agf\CDGM.agf
-[ Info: [✓] Verified file at C:\Users\seatt\.julia\dev\GlassCat\src\data\agf\CORNING.agf
-[ Info: [✓] Verified file at C:\Users\seatt\.julia\dev\GlassCat\src\data\agf\HERAEUS.agf
-[ Info: [✓] Verified file at C:\Users\seatt\.julia\dev\GlassCat\src\data\agf\HIKARI.agf
-[ Info: [✓] Verified file at C:\Users\seatt\.julia\dev\GlassCat\src\data\agf\INFRARED.agf
-[ Info: [✓] Verified file at C:\Users\seatt\.julia\dev\GlassCat\src\data\agf\ISUZU.agf
-[ Info: [✓] Verified file at C:\Users\seatt\.julia\dev\GlassCat\src\data\agf\LIGHTPATH.agf
-[ Info: [✓] Verified file at C:\Users\seatt\.julia\dev\GlassCat\src\data\agf\LZOS.agf
-[ Info: [✓] Verified file at C:\Users\seatt\.julia\dev\GlassCat\src\data\agf\MISC.agf
-[ Info: [✓] Verified file at C:\Users\seatt\.julia\dev\GlassCat\src\data\agf\RPO.agf
-[ Info: [✓] Verified file at C:\Users\seatt\.julia\dev\GlassCat\src\data\agf\TOPAS.agf
-[ Info: [✓] Verified file at C:\Users\seatt\.julia\dev\GlassCat\src\data\agf\UMICORE.agf
-[ Info: [✓] Verified file at C:\Users\seatt\.julia\dev\GlassCat\src\data\agf\ZEON.agf
+[ Info: [x] Removing unverified file at C:\Users\seatt\.julia\dev\AGFFileReader\src\data\agf\SUMITA.agf (expected fad12bfb1754ee9e33f7a6ec65c784c1dd1b8e87fde1ac2e440d24e85630c758, got b633780101bd14bfb23568d633ce504368b459113657b6ce1a22cbc83dd498d0)
+[ Info: [✓] Verified file at C:\Users\seatt\.julia\dev\AGFFileReader\src\data\agf\ARCHER.agf
+[ Info: [✓] Verified file at C:\Users\seatt\.julia\dev\AGFFileReader\src\data\agf\ARTON.agf
+[ Info: [✓] Verified file at C:\Users\seatt\.julia\dev\AGFFileReader\src\data\agf\BIREFRINGENT.agf
+[ Info: [✓] Verified file at C:\Users\seatt\.julia\dev\AGFFileReader\src\data\agf\CDGM.agf
+[ Info: [✓] Verified file at C:\Users\seatt\.julia\dev\AGFFileReader\src\data\agf\CORNING.agf
+[ Info: [✓] Verified file at C:\Users\seatt\.julia\dev\AGFFileReader\src\data\agf\HERAEUS.agf
+[ Info: [✓] Verified file at C:\Users\seatt\.julia\dev\AGFFileReader\src\data\agf\HIKARI.agf
+[ Info: [✓] Verified file at C:\Users\seatt\.julia\dev\AGFFileReader\src\data\agf\INFRARED.agf
+[ Info: [✓] Verified file at C:\Users\seatt\.julia\dev\AGFFileReader\src\data\agf\ISUZU.agf
+[ Info: [✓] Verified file at C:\Users\seatt\.julia\dev\AGFFileReader\src\data\agf\LIGHTPATH.agf
+[ Info: [✓] Verified file at C:\Users\seatt\.julia\dev\AGFFileReader\src\data\agf\LZOS.agf
+[ Info: [✓] Verified file at C:\Users\seatt\.julia\dev\AGFFileReader\src\data\agf\MISC.agf
+[ Info: [✓] Verified file at C:\Users\seatt\.julia\dev\AGFFileReader\src\data\agf\RPO.agf
+[ Info: [✓] Verified file at C:\Users\seatt\.julia\dev\AGFFileReader\src\data\agf\TOPAS.agf
+[ Info: [✓] Verified file at C:\Users\seatt\.julia\dev\AGFFileReader\src\data\agf\UMICORE.agf
+[ Info: [✓] Verified file at C:\Users\seatt\.julia\dev\AGFFileReader\src\data\agf\ZEON.agf
 [ Info: Using sources: NIKON, OHARA, HOYA, SCHOTT, ARCHER, ARTON, BIREFRINGENT, CDGM, CORNING, HERAEUS, HIKARI, INFRARED, ISUZU, LIGHTPATH, LZOS, MISC, RPO, TOPAS, UMICORE and ZEON
-[ Info: Writing C:\Users\seatt\.julia\dev\GlassCat\src\data\jl\NIKON.jl
-[ Info: Writing C:\Users\seatt\.julia\dev\GlassCat\src\data\jl\OHARA.jl
-[ Info: Writing C:\Users\seatt\.julia\dev\GlassCat\src\data\jl\HOYA.jl
-[ Info: Writing C:\Users\seatt\.julia\dev\GlassCat\src\data\jl\SCHOTT.jl
-[ Info: Writing C:\Users\seatt\.julia\dev\GlassCat\src\data\jl\ARCHER.jl
-[ Info: Writing C:\Users\seatt\.julia\dev\GlassCat\src\data\jl\ARTON.jl
-[ Info: Writing C:\Users\seatt\.julia\dev\GlassCat\src\data\jl\BIREFRINGENT.jl
-[ Info: Writing C:\Users\seatt\.julia\dev\GlassCat\src\data\jl\CDGM.jl
-[ Info: Writing C:\Users\seatt\.julia\dev\GlassCat\src\data\jl\CORNING.jl
-[ Info: Writing C:\Users\seatt\.julia\dev\GlassCat\src\data\jl\HERAEUS.jl
-[ Info: Writing C:\Users\seatt\.julia\dev\GlassCat\src\data\jl\HIKARI.jl
-[ Info: Writing C:\Users\seatt\.julia\dev\GlassCat\src\data\jl\INFRARED.jl
-[ Info: Writing C:\Users\seatt\.julia\dev\GlassCat\src\data\jl\ISUZU.jl
-[ Info: Writing C:\Users\seatt\.julia\dev\GlassCat\src\data\jl\LIGHTPATH.jl
-[ Info: Writing C:\Users\seatt\.julia\dev\GlassCat\src\data\jl\LZOS.jl
-[ Info: Writing C:\Users\seatt\.julia\dev\GlassCat\src\data\jl\MISC.jl
-[ Info: Writing C:\Users\seatt\.julia\dev\GlassCat\src\data\jl\RPO.jl
-[ Info: Writing C:\Users\seatt\.julia\dev\GlassCat\src\data\jl\TOPAS.jl
-[ Info: Writing C:\Users\seatt\.julia\dev\GlassCat\src\data\jl\UMICORE.jl
-[ Info: Writing C:\Users\seatt\.julia\dev\GlassCat\src\data\jl\ZEON.jl
-[ Info: Writing C:\Users\seatt\.julia\dev\GlassCat\src\data\jl\AGFGlassCat.jl
+[ Info: Writing C:\Users\seatt\.julia\dev\AGFFileReader\src\data\jl\NIKON.jl
+[ Info: Writing C:\Users\seatt\.julia\dev\AGFFileReader\src\data\jl\OHARA.jl
+[ Info: Writing C:\Users\seatt\.julia\dev\AGFFileReader\src\data\jl\HOYA.jl
+[ Info: Writing C:\Users\seatt\.julia\dev\AGFFileReader\src\data\jl\SCHOTT.jl
+[ Info: Writing C:\Users\seatt\.julia\dev\AGFFileReader\src\data\jl\ARCHER.jl
+[ Info: Writing C:\Users\seatt\.julia\dev\AGFFileReader\src\data\jl\ARTON.jl
+[ Info: Writing C:\Users\seatt\.julia\dev\AGFFileReader\src\data\jl\BIREFRINGENT.jl
+[ Info: Writing C:\Users\seatt\.julia\dev\AGFFileReader\src\data\jl\CDGM.jl
+[ Info: Writing C:\Users\seatt\.julia\dev\AGFFileReader\src\data\jl\CORNING.jl
+[ Info: Writing C:\Users\seatt\.julia\dev\AGFFileReader\src\data\jl\HERAEUS.jl
+[ Info: Writing C:\Users\seatt\.julia\dev\AGFFileReader\src\data\jl\HIKARI.jl
+[ Info: Writing C:\Users\seatt\.julia\dev\AGFFileReader\src\data\jl\INFRARED.jl
+[ Info: Writing C:\Users\seatt\.julia\dev\AGFFileReader\src\data\jl\ISUZU.jl
+[ Info: Writing C:\Users\seatt\.julia\dev\AGFFileReader\src\data\jl\LIGHTPATH.jl
+[ Info: Writing C:\Users\seatt\.julia\dev\AGFFileReader\src\data\jl\LZOS.jl
+[ Info: Writing C:\Users\seatt\.julia\dev\AGFFileReader\src\data\jl\MISC.jl
+[ Info: Writing C:\Users\seatt\.julia\dev\AGFFileReader\src\data\jl\RPO.jl
+[ Info: Writing C:\Users\seatt\.julia\dev\AGFFileReader\src\data\jl\TOPAS.jl
+[ Info: Writing C:\Users\seatt\.julia\dev\AGFFileReader\src\data\jl\UMICORE.jl
+[ Info: Writing C:\Users\seatt\.julia\dev\AGFFileReader\src\data\jl\ZEON.jl
+[ Info: Writing C:\Users\seatt\.julia\dev\AGFFileReader\src\data\jl\AGFAGFFileReader.jl

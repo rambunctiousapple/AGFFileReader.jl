@@ -1,5 +1,5 @@
 module HERAEUS
-using ..GlassCat: Glass, GlassID, AGF
+using ..AGFFileReader: Glass, GlassID, AGF
 export HERASIL, HOMOSIL, SUPRASIL, INFRASIL, HOQ
 
 const HERASIL = Glass(GlassID(AGF, 1254), 2, 0.47652307, 0.00284888095, 0.627786368, 0.0118369052, 0.872274404, 95.6856012, 0.0, 0.0, NaN, NaN, 0.20254, 3.5, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 20.0, 0.0, -1.0, -1.0, 0.51, -1.0, 0.0, -1.0, [], 1.458563, -1.0, -1.0, 0, 67.664757, 0, 2.203, 0.0)

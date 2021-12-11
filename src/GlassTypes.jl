@@ -25,7 +25,7 @@ abstract type AbstractGlass end
 """
 Stores all attributes relating to a glass type specified in an .AGF glass catalog.
 
-Never used directly, instead created using catalog glasses, e.g. `GlassCat.SCHOTT.N_BK7`.
+Never used directly, instead created using catalog glasses, e.g. `AGFFileReader.SCHOTT.N_BK7`.
 
 In order to prevent type ambiguities in OpticSim.jl we can't have this type paramaterized.
 """
@@ -99,11 +99,11 @@ glassname(g::Glass) = glassname(g.ID)
 function glassname(ID::GlassID)
     t, n = ID.type, ID.num
     if t === MODEL
-        return "GlassCat.ModelGlass.$(n)"
+        return "AGFFileReader.ModelGlass.$(n)"
     elseif t === MIL
-        return "GlassCat.GlassFromMIL.$(n)"
+        return "AGFFileReader.GlassFromMIL.$(n)"
     elseif t === AIR
-        return "GlassCat.Air"
+        return "AGFFileReader.Air"
     elseif t === OTHER
         return OTHER_GLASS_NAMES[n]
     elseif t === AGF
@@ -131,7 +131,7 @@ function glassforid(ID::GlassID)
     elseif t === MIL
         return MIL_GLASSES[n]::Glass
     elseif t === AIR
-        return GlassCat.Air
+        return AGFFileReader.Air
     elseif t === OTHER
         return OTHER_GLASSES[n]::Glass
     elseif t === AGF
@@ -150,7 +150,7 @@ Print out all data associated with `glass` in an easily readable format.
 
 # Examples
 ```julia-repl
-julia> info(GlassCat.RPO.IG4)
+julia> info(AGFFileReader.RPO.IG4)
 ID:                                                AGF:52
 Dispersion formula:                                Schott (1)
 Dispersion formula coefficients:

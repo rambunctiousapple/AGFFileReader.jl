@@ -1,7 +1,7 @@
-## Index of all fuctions in GlassCat
+## Index of all fuctions in AGFFileReader
 ```@index
 ```
 
 ```@autodocs
-Modules = [GlassCat]
+Modules = [AGFFileReader]
 ```

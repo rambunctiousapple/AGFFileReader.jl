@@ -1,18 +1,18 @@
-using GlassCat
+using AGFFileReader
 using Documenter
 
-DocMeta.setdocmeta!(GlassCat, :DocTestSetup, :(using GlassCat); recursive=true)
+DocMeta.setdocmeta!(AGFFileReader, :DocTestSetup, :(using AGFFileReader); recursive=true)
 
 #TODO add plotting examples
 
 makedocs(;
-    modules=[GlassCat],
+    modules=[AGFFileReader],
     authors="rambunctiousapple",
-    repo="https://github.com/rambunctiousapple/GlassCat.jl/blob/{commit}{path}#{line}",
-    sitename="GlassCat.jl",
+    repo="https://github.com/rambunctiousapple/AGFFileReader.jl/blob/{commit}{path}#{line}",
+    sitename="AGFFileReader.jl",
     format=Documenter.HTML(;
         prettyurls=get(ENV, "CI", "false") == "true",
-        canonical="https://rambunctiousapple.github.io/GlassCat.jl",
+        canonical="https://rambunctiousapple.github.io/AGFFileReader.jl",
         assets=String[],
     ),
     pages=[
@@ -22,7 +22,7 @@ makedocs(;
 )
 
 deploydocs(;
-    repo="github.com/rambunctiousapple/GlassCat.jl.git",
+    repo="github.com/rambunctiousapple/AGFFileReader.jl.git",
     devbranch="main",
     push_preview = true,
 )
