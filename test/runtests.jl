@@ -275,7 +275,7 @@ end
         @test index(CARGILLE.OG0608, 0.578) == 1.4596475735607324
 
         # make sure that the other functions work
-        plot_indices(SCHOTT.N_BK7; polyfit = true, fiterror = true)
+        # plot_indices(SCHOTT.N_BK7; polyfit = true, fiterror = true) #this causes error on github actions. Can't load graphics library for headless operation.
     end
 
     @testset "Air.jl" begin
