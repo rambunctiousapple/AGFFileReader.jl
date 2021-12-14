@@ -2,6 +2,8 @@
 # Copyright (c) Microsoft Corporation. All rights reserved.
 # See LICENSE in the project root for full license information.
 
+#TODO move this code into generate.jl. Change AGFFileReader.jl so it doesn't install glass files automatically. It looks like
+#generating files on import is frowned upon by Julia Registrator. Make user do it manually.
 include(joinpath("..", "src", "constants.jl"))
 include(joinpath(GLASSCAT_DIR, "GlassTypes.jl"))
 include(joinpath(GLASSCAT_DIR, "sources.jl"))
