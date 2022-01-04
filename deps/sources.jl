@@ -103,7 +103,9 @@ function verify_sources!(sources::AbstractVector{<:AbstractVector{<:AbstractStri
         verified = verify_source(agffile, sha256sum)
         if !verified && length(source) >= 3
             # try downloading and re-verifying the source if download information is provided (sources[3:end])
+            println("before download")
             download_source(agffile, source[3:end]...)
+            println("after download")
             verified = verify_source(agffile, sha256sum)
         end
         if !verified
@@ -153,6 +155,7 @@ function download_source(dest::AbstractString, url::AbstractString, POST_data::U
             reader = ZipFile.Reader(IOBuffer(resp.body))
             agfdata = read(reader.files[findfirst(f -> endswith(lowercase(f.name), ".agf"), reader.files)])
         end
+        println("dest $dest")
         write(dest, agfdata)
     catch e
         @error e

@@ -4,6 +4,7 @@ authors = ["rambunctiousapple"]
 version = "1.0.0"
 
 [deps]
+Artifacts = "56f22d72-fd6d-98f1-02f0-08ddc0907c33"
 DataFrames = "a93c6f00-e57d-5684-b7b6-d8193f3e46c0"
 DelimitedFiles = "8bb1440f-4735-579b-a4ab-409b98df4dab"
 ForwardDiff = "f6369f11-7733-5829-9624-2563aa707210"
@@ -19,16 +20,16 @@ Unitful = "1986cc42-f94f-5a68-af5c-568840ba703d"
 ZipFile = "a5390f91-8eb1-5f08-bee0-b1d1ffed6cea"
 
 [compat]
-Plots = "1"
 DataFrames = "1"
-Polynomials = "2"
-ZipFile = "0.9"
-Unitful = "1"
-StringEncodings = "0.3"
-HTTP = "0.9"
-GR = "0.62"
 ForwardDiff = "0.10"
+GR = "0.62"
+HTTP = "0.9"
+Plots = "1"
+Polynomials = "2"
 StaticArrays = "1"
+StringEncodings = "0.3"
+Unitful = "1"
+ZipFile = "0.9"
 julia = "1.7"
 
 [extras]
