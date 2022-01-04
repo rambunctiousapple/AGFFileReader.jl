@@ -18,6 +18,8 @@ using ForwardDiff
 
 include("constants.jl")
 
+#maybe can solve the literal/Intellisense problem by creating a file in the Artifacts directory which contains literals with the pathnames to the various glass files. Then include the created file here. Might work. Probably won't. 
+
 #Look up the location of the artifacts directory and load GlassTypes.jl
 agf_hash = artifact_hash("AGF", artifact_toml)
 catalog_path = artifact_path(agf_hash)
@@ -28,6 +30,7 @@ include(jointpath(catalog_path,"OTHER.jl"))
 export GlassID, info, glassid, glassname, glassforid
 include("Air.jl")
 export Air, isair
+
 
 #TODO need to modify to use Artifacts.toml instead of constants
 # # include built glass cat source files
